@@ -1,33 +1,43 @@
 # cron-tab-install
 
-# Project Title
-
 A cli interface for cron scripts
 
 ## Roadmap
 
-- Additional browser support
+- paste custom scripts into cron
 
-- Add more integrations
+- have a time selector for when the script should be run
+
+- ability to select file to put into cron
+
+
+### Future plans:
+
+- allow for uptime monitoring
+
+- notify if custom cron fails/succeeds
 
 
 ## Usage/Examples
 
-```javascript
+```bash
 
-blah
+./script.sh -t "5 4 * * *"  -f ./refresh-blog-db.sh
+
 ```
 
 
 ## FAQ
 
-#### Question 1
+#### Q: Who is cron-tab-install for?
 
-Answer 1
+A: People who are lazy (like me)
 
-#### Question 2
+#### Q: Why cron-tab-install?
 
-Answer 2
+A: Easier and less stressful management of cron tabs,
+we do all the calculations for you, and also offer a totally local
+and centerally managed monitor for your custom made jobs.
 
 
 ## Documentation
@@ -37,12 +47,18 @@ Answer 2
 
 ## Environment Variables
 
-To run this project, you will need to add the following environment variables to your .env file
+To run this script headlessly, you will need to add the following environment variables:
 
-`API_KEY`
+`CTI_time`
 
-`ANOTHER_API_KEY`
+Default: "* 2 * * 1/1"
 
+Default meaning: 
+At every minute past hour 2 on every day-of-week from Monday through Sunday.
+
+`CTI_script`
+
+Default: ./script.sh
 
 ## Features
 
@@ -54,10 +70,9 @@ To run this project, you will need to add the following environment variables to
 
 ## Installation
 
-Install my-project with npm
+Install this project by curling the script!
 
 ```bash
-  npm install my-project
-  cd my-project
+curl -s https://raw.githubusercontent.com/maxbybee/cron-tab-install/master/README.md | bash -s CTI_script=./checkforupdates.sh
 ```
     
