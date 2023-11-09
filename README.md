@@ -70,9 +70,14 @@ Default: ./script.sh
 
 ## Installation
 
-Install this project by curling the script!
+Install & run this project by curling the script!
 
 ```bash
-curl -s https://raw.githubusercontent.com/maxbybee/cron-tab-install/master/README.md | bash -s CTI_script=./checkforupdates.sh
+curl -s https://raw.githubusercontent.com/maxbybee/cron-tab-install/master/script.sh | bash -s CTI_script=./checkforupdates.sh
 ```
     
+or you can just download the script for later use:
+
+```bash
+curl https://raw.githubusercontent.com/maxbybee/cron-tab-install/master/script.sh -O script.sh
+```
